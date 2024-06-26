@@ -19,7 +19,7 @@ let raqueteComprimento = 10;
 let raqueteAltura = 90;
 
 //placar do jogo
-let meusPontos = 0;
+let camilo = 0;
 let pontosDoOponente = 0;
 
 
@@ -31,7 +31,7 @@ function setup() {
 
 function draw() {
     background(0);
-    mostraBolinha();
+    eduardaCamilo();
     movimentaBolinha();
     verificaColisaoBorda();
     mostraRaquete(xRaquete, yRaquete);
@@ -43,7 +43,7 @@ function draw() {
     incluiPlacar() 
     marcaPonto();
 }
-function mostraBolinha() {
+function eduardaCamilo() {
   circle(xBolinha, yBolinha, diametro);
 }
 
@@ -100,7 +100,7 @@ function incluiPlacar(){
     fill(color(255,140, 0));
     rect(150, 10, 40, 20);
     fill(255);
-    text(meusPontos, 170, 26);
+    text(camilo, 170, 26);
     fill(color(255,140, 0));
     rect(450, 10, 40, 20);
     fill(255);
@@ -113,7 +113,7 @@ function incluiPlacar(){
 
 function marcaPonto() {
   if (xBolinha > 580) {
-    meusPontos += 1;
+    camilo += 1;
   }
   if (xBolinha < 10) {
     pontosDoOponente += 1;
